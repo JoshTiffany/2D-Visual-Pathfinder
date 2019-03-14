@@ -1,20 +1,22 @@
 import queue
 from datetime import datetime
+import termcolor
+
 
 starttime = datetime.now()
 
 
 def createMaze():
     maze = []
-    print("Where do you want your start node?")
-    user_input = int(input("Pick a number between 1-5: "))
-    print("Where do you want your end node?")
-    user_input2 = int(input("Enter a number between 1-5: "))
+    print(termcolor.colored("Where do you want your start node?", 'blue'))
+    user_input = int(input(termcolor.colored("Pick a number between 1-5: ", "red")))
+    print(termcolor.colored("Where do you want your end node?", "blue"))
+    user_input2 = int(input(termcolor.colored("Enter a number between 1-5: ", "red")))
 
     # for the first position
 
     if user_input == 1 and user_input2 == 1:
-        maze.append(["#", "O", "#", "#", "#", "#", "#"])
+        maze.append(["#", termcolor.colored("O", "red"), "#", "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -23,7 +25,7 @@ def createMaze():
         maze.append(["#", "X", "#", "#", "#", "#", "#"])
 
     elif user_input == 1 and user_input2 == 2:
-        maze.append(["#", "O", "#", "#", "#", "#", "#"])
+        maze.append(["#", termcolor.colored("O", "red"), "#", "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -32,7 +34,7 @@ def createMaze():
         maze.append(["#", "#", "X", "#", "#", "#", "#"])
 
     elif user_input == 1 and user_input2 == 3:
-        maze.append(["#", "O", "#", "#", "#", "#", "#"])
+        maze.append(["#", termcolor.colored("O", "red"), "#", "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -41,7 +43,7 @@ def createMaze():
         maze.append(["#", "#", "#", "X", "#", "#", "#"])
 
     elif user_input == 1 and user_input2 == 4:
-        maze.append(["#", "O", "#", "#", "#", "#", "#"])
+        maze.append(["#", termcolor.colored("O", "red"), "#", "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -50,7 +52,7 @@ def createMaze():
         maze.append(["#", "#", "#", "#", "X", "#", "#"])
 
     elif user_input == 1 and user_input2 == 5:
-        maze.append(["#", "O", "#", "#", "#", "#", "#"])
+        maze.append(["#", termcolor.colored("O", "red"), "#", "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -61,7 +63,7 @@ def createMaze():
         # for the second position
 
     elif user_input == 2 and user_input2 == 1:
-        maze.append(["#", "#", "O", "#", "#", "#", "#"])
+        maze.append(["#", "#", termcolor.colored("O", "red"), "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -70,7 +72,7 @@ def createMaze():
         maze.append(["#", "X", "#", "#", "#", "#", "#"])
 
     elif user_input == 2 and user_input2 == 2:
-        maze.append(["#", "#", "O", "#", "#", "#", "#"])
+        maze.append(["#", "#", termcolor.colored("O", "red"), "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -79,7 +81,7 @@ def createMaze():
         maze.append(["#", "#", "X", "#", "#", "#", "#"])
 
     elif user_input == 2 and user_input2 == 3:
-        maze.append(["#", "#", "O", "#", "#", "#", "#"])
+        maze.append(["#", "#", termcolor.colored("O", "red"), "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -88,7 +90,7 @@ def createMaze():
         maze.append(["#", "#", "#", "X", "#", "#", "#"])
 
     elif user_input == 2 and user_input2 == 4:
-        maze.append(["#", "#", "O", "#", "#", "#", "#"])
+        maze.append(["#", "#", termcolor.colored("O", "red"), "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -97,7 +99,7 @@ def createMaze():
         maze.append(["#", "#", "#", "#", "X", "#", "#"])
 
     elif user_input == 2 and user_input2 == 5:
-        maze.append(["#", "#", "O", "#", "#", "#", "#"])
+        maze.append(["#", "#", termcolor.colored("O", "red"), "#", "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -108,7 +110,7 @@ def createMaze():
         # for the third position
 
     elif user_input == 3 and user_input2 == 1:
-        maze.append(["#", "#", "#", "O", "#", "#", "#"])
+        maze.append(["#", "#", "#", termcolor.colored("O", "red"), "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -117,7 +119,7 @@ def createMaze():
         maze.append(["#", "X", "#", "#", "#", "#", "#"])
 
     elif user_input == 3 and user_input2 == 2:
-        maze.append(["#", "#", "#", "O", "#", "#", "#"])
+        maze.append(["#", "#", "#", termcolor.colored("O", "red"), "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -126,7 +128,7 @@ def createMaze():
         maze.append(["#", "#", "X", "#", "#", "#", "#"])
 
     elif user_input == 3 and user_input2 == 3:
-        maze.append(["#", "#", "#", "O", "#", "#", "#"])
+        maze.append(["#", "#", "#", termcolor.colored("O", "red"), "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -135,7 +137,7 @@ def createMaze():
         maze.append(["#", "#", "#", "X", "#", "#", "#"])
 
     elif user_input == 3 and user_input2 == 4:
-        maze.append(["#", "#", "#", "O", "#", "#", "#"])
+        maze.append(["#", "#", "#", termcolor.colored("O", "red"), "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -144,7 +146,7 @@ def createMaze():
         maze.append(["#", "#", "#", "#", "X", "#", "#"])
 
     elif user_input == 3 and user_input2 == 5:
-        maze.append(["#", "#", "#", "O", "#", "#", "#"])
+        maze.append(["#", "#", "#", termcolor.colored("O", "red"), "#", "#", "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -155,7 +157,7 @@ def createMaze():
         # for the forth position
 
     elif user_input == 4 and user_input2 == 1:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -164,7 +166,7 @@ def createMaze():
         maze.append(["#", "X", "#", "#", "#", "#", "#"])
 
     elif user_input == 4 and user_input2 == 2:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -173,7 +175,7 @@ def createMaze():
         maze.append(["#", "#", "X", "#", "#", "#", "#"])
 
     elif user_input == 4 and user_input2 == 3:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -182,7 +184,7 @@ def createMaze():
         maze.append(["#", "#", "#", "X", "#", "#", "#"])
 
     elif user_input == 4 and user_input2 == 4:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -191,7 +193,7 @@ def createMaze():
         maze.append(["#", "#", "#", "#", "X", "#", "#"])
 
     elif user_input == 4 and user_input2 == 5:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#",termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -202,7 +204,7 @@ def createMaze():
         # for the fifth position
 
     elif user_input == 5 and user_input2 == 1:
-        maze.append(["#", "#", "#", "#", "#", "O", "#"])
+        maze.append(["#", "#", "#", "#", "#", termcolor.colored("O", "red"), "#"])
         maze.append(["#", " ", " ", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -211,7 +213,7 @@ def createMaze():
         maze.append(["#", "X", "#", "#", "#", "#", "#"])
 
     elif user_input == 5 and user_input2 == 2:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -220,7 +222,7 @@ def createMaze():
         maze.append(["#", "#", "X", "#", "#", "#", "#"])
 
     elif user_input == 5 and user_input2 == 3:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#",termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -229,7 +231,7 @@ def createMaze():
         maze.append(["#", "#", "#", "X", "#", "#", "#"])
 
     elif user_input == 5 and user_input2 == 4:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -238,7 +240,7 @@ def createMaze():
         maze.append(["#", "#", "#", "#", "X", "#", "#"])
 
     elif user_input == 5 and user_input2 == 5:
-        maze.append(["#", "#", "#", "#", "O", "#", "#"])
+        maze.append(["#", "#", "#", "#", termcolor.colored("O", "red"), "#", "#"])
         maze.append(["#", " ", " ", " ", " ", " ", "#"])
         maze.append(["#", " ", "#", " ", "#", " ", "#"])
         maze.append(["#", " ", "#", " ", " ", " ", "#"])
@@ -255,7 +257,7 @@ def createMaze():
 
 def printMaze(maze, path=""):
     for x, pos in enumerate(maze[0]):
-        if pos == "O":
+        if pos == termcolor.colored("O", "red"):
             start = x
 
     i = start
@@ -278,7 +280,7 @@ def printMaze(maze, path=""):
     for j, row in enumerate(maze):
         for i, col in enumerate(row):
             if (j, i) in pos:
-                print("+ ", end="")
+                print(termcolor.colored("+ ", "blue"), end="")
             else:
                 print(col + " ", end="")
         print()
@@ -286,7 +288,7 @@ def printMaze(maze, path=""):
 
 def valid(maze, moves):
     for x, pos in enumerate(maze[0]):
-        if pos == "O":
+        if pos == termcolor.colored("O", "red"):
             start = x
 
     i = start
@@ -314,7 +316,7 @@ def valid(maze, moves):
 
 def findEnd(maze, moves):
     for x, pos in enumerate(maze[0]):
-        if pos == "O":
+        if pos == termcolor.colored("O", "red"):
             start = x
 
     i = start
@@ -333,7 +335,7 @@ def findEnd(maze, moves):
             j += 1
 
     if maze[j][i] == "X":
-        print("Found: " + moves)
+        print(termcolor.colored("Found: ", "yellow") + termcolor.colored(moves, "green"))
         printMaze(maze, moves)
         return True
 
@@ -352,4 +354,4 @@ while not findEnd(maze, add):
         if valid(maze, put):
             nums.put(put)
 
-print("Run in  ", datetime.now() - starttime)
+print(termcolor.colored("Run in: ", "yellow"), termcolor.colored( datetime.now() - starttime, "green"))
